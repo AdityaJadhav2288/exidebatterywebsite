@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exide Battery Shop - Products</title>
+    <style>
+        /* Internal CSS */
+
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #16a085;
+            border-radius: 5px;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .product-item {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        .product-item h3 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .product-item p {
+            color: #555;
+        }
+
+        .buy-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="Exide Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Repeating 15 Products -->
+                <div class="product-item">
+                    <img src="./img/img 20.jfif" alt="Exide Battery 1">
+                    <h3>Exide Battery 1</h3>
+                    <p>High-performance automotive battery.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 1')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/3.jfif" alt="Exide Battery 2">
+                    <h3>Exide Battery 2</h3>
+                    <p>Reliable power for heavy-duty applications.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 2')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/min 3.jfif" alt="Exide Battery 3">
+                    <h3>Exide Battery 3</h3>
+                    <p>Maintenance-free, long-lasting battery.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 3')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/exide 2 wheler.jfif" alt="Exide Battery 4">
+                    <h3>Exide Battery 4</h3>
+                    <p>Compact and efficient for small vehicles.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 4')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/exide inverter.jfif" alt="Exide Battery 5">
+                    <h3>Exide Battery 5</h3>
+                    <p>Heavy-duty battery for trucks and buses.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 5')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 5.jfif" alt="Exide Battery 6">
+                    <h3>Exide Battery 6</h3>
+                    <p>High performance for all-terrain vehicles.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 6')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 6.jfif" alt="Exide Battery 7">
+                    <h3>Exide Battery 7</h3>
+                    <p>Specialized battery for marine applications.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 7')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 7.jfif" alt="Exide Battery 8">
+                    <h3>Exide Battery 8</h3>
+                    <p>Durable battery for extreme weather conditions.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 8')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 8.jfif" alt="Exide Battery 9">
+                    <h3>Exide Battery 9</h3>
+                    <p>Economical and reliable for daily use.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 9')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 9.jfif" alt="Exide Battery 10">
+                    <h3>Exide Battery 10</h3>
+                    <p>Fast charging for electric vehicles.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 10')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 10.jfif" alt="Exide Battery 11">
+                    <h3>Exide Battery 11</h3>
+                    <p>High capacity for industrial applications.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 11')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 11.jfif" alt="Exide Battery 12">
+                    <h3>Exide Battery 12</h3>
+                    <p>Deep cycle battery for off-grid use.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 12')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 12.jfif" alt="Exide Battery 13">
+                    <h3>Exide Battery 13</h3>
+                    <p>Long-lasting power for home inverters.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 13')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 13.jfif" alt="Exide Battery 14">
+                    <h3>Exide Battery 14</h3>
+                    <p>Eco-friendly battery with recyclable materials.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 14')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/img 14.jfif" alt="Exide Battery 15">
+                    <h3>Exide Battery 15</h3>
+                    <p>High voltage battery for special applications.</p>
+                    <button class="buy-btn" onclick="buyNow('Exide Battery 15')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Exide Battery Shop. All Rights Reserved.</p>
+                <p>Follow us on:
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Twitter</a> | 
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Buy Now Button
+        function buyNow(productName) {
+            alert('Thank you for your interest in ' + productName + '. Please contact us for further details.');
+        }
+    </script>
+</body>
+</html>

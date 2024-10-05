@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exide Battery Shop - Services</title>
+    <style>
+        /* Internal CSS */
+
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #16a085;
+            border-radius: 5px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-item h3 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .service-item p {
+            color: #555;
+        }
+
+        /* Warranty Check Form */
+        .warranty-check {
+            background-color: #ecf0f1;
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .warranty-check h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .warranty-check form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .warranty-check input, .warranty-check select, .warranty-check button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .warranty-check button {
+            background-color: #e74c3c;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .warranty-check button:hover {
+            background-color: #c0392b;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="Exide Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Battery Installation</h3>
+                    <p>Expert battery installation services for your convenience.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Battery Testing</h3>
+                    <p>Accurate battery testing to ensure your battery’s longevity.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Recycling</h3>
+                    <p>Eco-friendly battery recycling options to reduce waste.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Maintenance</h3>
+                    <p>Comprehensive battery maintenance services to extend battery life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Check Form -->
+    <section class="warranty-check">
+        <div class="container">
+            <h3>Check Your Warranty</h3>
+            <form id="warrantyForm">
+                <input type="text" id="serialNumber" placeholder="Enter Battery Serial Number" required>
+                <input type="text" id="purchaseDate" placeholder="Enter Purchase Date (YYYY-MM-DD)" required>
+                <select id="productType" required>
+                    <option value="">Select Product Type</option>
+                    <option value="Automotive">Automotive Battery</option>
+                    <option value="Inverter">Inverter Battery</option>
+                    <option value="HeavyDuty">Heavy Duty Battery</option>
+                </select>
+                <button type="submit">Check Warranty</button>
+            </form>
+            <div class="message" id="warrantyMessage"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Exide Battery Shop. All Rights Reserved.</p>
+                <p>Follow us on:
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Twitter</a> | 
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Warranty Check Form
+        document.getElementById('warrantyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const serialNumber = document.getElementById('serialNumber').value;
+            const purchaseDate = document.getElementById('purchaseDate').value;
+            const productType = document.getElementById('productType').value;
+
+            if (serialNumber && purchaseDate && productType) {
+                const warrantyMessage = `The warranty for the ${productType} with Serial Number: ${serialNumber} is valid until 2 years from the purchase date: ${purchaseDate}.`;
+                document.getElementById('warrantyMessage').innerText = warrantyMessage;
+            } else {
+                document.getElementById('warrantyMessage').innerText = "Please fill in all fields.";
+            }
+        });
+    </script>
+</body>
+</html>
